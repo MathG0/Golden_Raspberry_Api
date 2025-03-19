@@ -95,7 +95,9 @@ Resposta esperada (exemplo):
 ```
 🗃️ Banco de Dados
   A API usa SQLite (database.db) para armazenar os filmes.
+  
   O banco de dados é criado automaticamente ao iniciar a aplicação.
+  
   Os dados são carregados do arquivo movies.csv no startup da API.
 
 🧪 Como Rodar os Testes
