@@ -1,43 +1,136 @@
-# README.md
-README = """
-# API Golden Raspberry Awards
+# 🎬 API Golden Raspberry Awards
 
-## Como Rodar o Projeto
+Esta API permite consultar os filmes vencedores do **Framboesa de Ouro** (Golden Raspberry Awards) e calcular os **intervalos entre vitórias dos produtores**.
 
-1. Clone o repositório:
-   ```sh
-   git clone https://github.com/seu-repositorio/backend.git
-   ```
+## 📂 Estrutura do Projeto
+/backend │── database.py # Configuração do banco de dados (SQLite) │── main.py # API desenvolvida com FastAPI │── movies.csv # Arquivo com os filmes vencedores │── test_main.py # Testes automatizados com pytest │── requirements.txt # Dependências do projeto │── README.md # Documentação do projeto
 
-2. Entre no diretório do projeto:
-   ```sh
-   cd backend
-   ```
+yaml
+Copiar
+Editar
 
-3. Instale as dependências:
-   ```sh
-   pip install -r requirements.txt
-   ```
+---
 
-4. Execute a API:
-   ```sh
-   uvicorn main:app --reload
-   ```
+## 🚀 **Como Rodar o Projeto**
+### 1️⃣ **Clone o repositório**
+```sh
+git clone https://github.com/seu-usuario/golden-raspberry-api.git
+cd golden-raspberry-api
+2️⃣ Crie um ambiente virtual (opcional)
+sh
+Copiar
+Editar
+python -m venv venv
+source venv/bin/activate  # Para Linux/Mac
+venv\Scripts\activate     # Para Windows
+3️⃣ Instale as dependências
+sh
+Copiar
+Editar
+pip install -r requirements.txt
+4️⃣ Execute a API
+sh
+Copiar
+Editar
+uvicorn main:app --reload
+A API será iniciada em http://127.0.0.1:8000.
 
-5. Acesse a documentação interativa em:
-   ```sh
-   http://127.0.0.1:8000/docs
-   ```
+📌 Endpoints Disponíveis
+🔹 1. Página Inicial
+GET /
+Descrição: Retorna uma mensagem indicando que a API está rodando.
+Resposta esperada:
+json
+Copiar
+Editar
+{
+  "message": "API funcionando! Vá para /docs para ver os endpoints."
+}
+🔹 2. Listar todos os filmes
+GET /movies
+Descrição: Retorna a lista de filmes carregados do movies.csv.
+Resposta esperada (exemplo):
+json
+Copiar
+Editar
+[
+  {
+    "id": 1,
+    "title": "Jack and Jill",
+    "year": 2011,
+    "producer": "Adam Sandler",
+    "winner": true
+  },
+  ...
+]
+🔹 3. Encontrar os produtores com maior/menor intervalo entre vitórias
+GET /producers/intervals
+Descrição: Retorna os produtores com o maior e o menor intervalo entre vitórias.
+Resposta esperada (exemplo):
+json
+Copiar
+Editar
+{
+  "min": [
+    {
+      "producer": "Adam Sandler",
+      "interval": 1,
+      "previousWin": 2011,
+      "followingWin": 2012
+    }
+  ],
+  "max": [
+    {
+      "producer": "Michael De Luca",
+      "interval": 7,
+      "previousWin": 2008,
+      "followingWin": 2015
+    }
+  ]
+}
+🗃️ Banco de Dados
+A API usa SQLite (database.db) para armazenar os filmes.
+O banco de dados é criado automaticamente ao iniciar a aplicação.
+Os dados são carregados do arquivo movies.csv no startup da API.
+🧪 Como Rodar os Testes
+Instale as dependências de testes:
 
-## Como Rodar os Testes
+sh
+Copiar
+Editar
+pip install pytest
+Execute os testes automatizados:
 
-1. Instale as dependências de testes:
-   ```sh
-   pip install pytest
-   ```
+sh
+Copiar
+Editar
+pytest test_main.py
+Se todos os testes passarem, a saída será semelhante a:
 
-2. Execute os testes:
-   ```sh
-   pytest test_main.py
-   ```
-"""
+sh
+Copiar
+Editar
+========================== 2 passed in 0.72s ==========================
+🔗 Acesse a Documentação Interativa
+Após rodar a API, acesse o Swagger UI para testar os endpoints:
+
+📌 http://127.0.0.1:8000/docs (Swagger UI)
+📌 http://127.0.0.1:8000/redoc (ReDoc)
+👨‍💻 Tecnologias Utilizadas
+✅ FastAPI - Framework para criação de APIs rápidas e eficientes
+✅ SQLAlchemy - ORM para interação com banco de dados SQLite
+✅ Pydantic - Validação de dados
+✅ pytest - Framework de testes
+
+📌 Licença
+Este projeto é de código aberto e pode ser utilizado conforme necessário.
+
+Se precisar de melhorias ou tiver dúvidas, contribua com o repositório! 🚀🎬
+
+yaml
+Copiar
+Editar
+
+---
+
+Agora você pode **copiar e colar** diretamente no seu projeto. Se precisar de mais ajustes, só avisar! 🚀🔥
