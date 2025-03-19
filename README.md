@@ -1,14 +1,14 @@
-# 🎬 API Golden Raspberry Awards
+ --API Golden Raspberry Awards--
 
 Esta API permite consultar os filmes vencedores do **Framboesa de Ouro** (Golden Raspberry Awards) e calcular os **intervalos entre vitórias dos produtores**.
 
-## 📂 Estrutura do Projeto
+ --Estrutura do Projeto--
 
 /backend │── database.py → Configuração do banco de dados (SQLite) │── main.py → API desenvolvida com FastAPI │── movies.csv → Arquivo com os filmes vencedores │── test_main.py → Testes automatizados com pytest │── requirements.txt → Dependências do projeto │── README.md → Documentação do projeto
 
 ---
 
-Como Rodar o Projeto
+ --Como Rodar o Projeto--
 
 1 - Clone o repositório
 ```sh
@@ -38,7 +38,7 @@ uvicorn main:app --reload
 ```
 A API será iniciada em http://127.0.0.1:8000.
 
-Endpoints Disponíveis
+ --Endpoints Disponíveis--
 
 1. Página Inicial
 ```sh
@@ -99,7 +99,7 @@ Resposta esperada:
   ]
 }
 ```
-Banco de Dados
+ --Banco de Dados--
   A API usa SQLite (database.db) para armazenar os filmes.
   
   O banco de dados é criado automaticamente ao iniciar a aplicação.
@@ -127,10 +127,9 @@ Após rodar a API, acesse o Swagger UI para testar os endpoints:
 http://127.0.0.1:8000/docs (Swagger UI)
 http://127.0.0.1:8000/redoc (ReDoc)
 ``` 
-Principais Tecnologias Utilizadas
+ --Principais Tecnologias Utilizadas--
 
 - FastAPI
 - SQLAlchemy
 - Pydantic
 - pytest
-```
