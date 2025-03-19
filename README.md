@@ -22,22 +22,16 @@ cd golden-raspberry-api
 
 ### 2️⃣ Crie um ambiente virtual (opcional)
 ```sh
-Copiar
-Editar
 python -m venv venv
 source venv/bin/activate  # Para Linux/Mac
 venv\Scripts\activate     # Para Windows
 ```
 3️⃣ Instale as dependências
 ```sh
-Copiar
-Editar
 pip install -r requirements.txt
 ```
 4️⃣ Execute a API
 ```sh
-Copiar
-Editar
 uvicorn main:app --reload
 A API será iniciada em http://127.0.0.1:8000.
 ```
@@ -48,10 +42,10 @@ A API será iniciada em http://127.0.0.1:8000.
 ```sh
 GET /
 Descrição: Retorna uma mensagem indicando que a API está rodando.
+```
 Resposta esperada:
 json
-Copiar
-Editar
+```sh
 {
   "message": "API funcionando! Vá para /docs para ver os endpoints."
 }
@@ -60,10 +54,9 @@ Editar
 ```sh
 GET /movies
 Descrição: Retorna a lista de filmes carregados do movies.csv.
+```
 Resposta esperada (exemplo):
-json
-Copiar
-Editar
+```sh
 [
   {
     "id": 1,
@@ -79,10 +72,9 @@ Editar
 ```sh
 GET /producers/intervals
 Descrição: Retorna os produtores com o maior e o menor intervalo entre vitórias.
+```
 Resposta esperada (exemplo):
-json
-Copiar
-Editar
+```sh
 {
   "min": [
     {
@@ -103,33 +95,27 @@ Editar
 }
 ```
 🗃️ Banco de Dados
-A API usa SQLite (database.db) para armazenar os filmes.
-O banco de dados é criado automaticamente ao iniciar a aplicação.
-Os dados são carregados do arquivo movies.csv no startup da API.
+  A API usa SQLite (database.db) para armazenar os filmes.
+  O banco de dados é criado automaticamente ao iniciar a aplicação.
+  Os dados são carregados do arquivo movies.csv no startup da API.
 
 🧪 Como Rodar os Testes
 Instale as dependências de testes:
 
 ```sh
-Copiar
-Editar
 pip install pytest
+```
 Execute os testes automatizados:
-```
 ```sh
-Copiar
-Editar
 pytest test_main.py
-Se todos os testes passarem, a saída será semelhante a:
 ```
+Se todos os testes passarem, a saída será semelhante a:
 ```sh
-Copiar
-Editar
 ========================== 2 passed in 0.72s ==========================
 ```
 🔗 Acesse a Documentação Interativa
 Após rodar a API, acesse o Swagger UI para testar os endpoints:
-
+```sh
 📌 http://127.0.0.1:8000/docs (Swagger UI)
 📌 http://127.0.0.1:8000/redoc (ReDoc)
 👨‍💻 Tecnologias Utilizadas
@@ -137,16 +123,4 @@ Após rodar a API, acesse o Swagger UI para testar os endpoints:
 ✅ SQLAlchemy - ORM para interação com banco de dados SQLite
 ✅ Pydantic - Validação de dados
 ✅ pytest - Framework de testes
-
-📌 Licença
-Este projeto é de código aberto e pode ser utilizado conforme necessário.
-
-Se precisar de melhorias ou tiver dúvidas, contribua com o repositório! 🚀🎬
-
-yaml
-Copiar
-Editar
-
----
-
-Agora está 100% formatado corretamente para o GitHub, com **prompts de código (`sh` para shell, `json` para JSON, etc.)**.  
+```
