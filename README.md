@@ -41,8 +41,8 @@ A API será iniciada em http://127.0.0.1:8000.
 🔹 1. Página Inicial
 ```sh
 GET /
-Descrição: Retorna uma mensagem indicando que a API está rodando.
 ```
+Descrição: Retorna uma mensagem indicando que a API está rodando.
 Resposta esperada:
 json
 ```sh
@@ -53,8 +53,8 @@ json
 🔹 2. Listar todos os filmes
 ```sh
 GET /movies
-Descrição: Retorna a lista de filmes carregados do movies.csv.
 ```
+Descrição: Retorna a lista de filmes carregados do movies.csv.
 Resposta esperada (exemplo):
 ```sh
 [
@@ -71,8 +71,8 @@ Resposta esperada (exemplo):
 🔹 3. Encontrar os produtores com maior/menor intervalo entre vitórias
 ```sh
 GET /producers/intervals
-Descrição: Retorna os produtores com o maior e o menor intervalo entre vitórias.
 ```
+Descrição: Retorna os produtores com o maior e o menor intervalo entre vitórias.
 Resposta esperada (exemplo):
 ```sh
 {
