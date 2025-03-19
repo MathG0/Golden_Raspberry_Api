@@ -6,10 +6,6 @@ Esta API permite consultar os filmes vencedores do **Framboesa de Ouro** (Golden
 
 /backend │── database.py → Configuração do banco de dados (SQLite) │── main.py → API desenvolvida com FastAPI │── movies.csv → Arquivo com os filmes vencedores │── test_main.py → Testes automatizados com pytest │── requirements.txt → Dependências do projeto │── README.md → Documentação do projeto
 
-yaml
-Copiar
-Editar
-
 ---
 
 ## 🚀 Como Rodar o Projeto
@@ -43,6 +39,7 @@ A API será iniciada em http://127.0.0.1:8000.
 GET /
 ```
 Descrição: Retorna uma mensagem indicando que a API está rodando.
+
 Resposta esperada:
 json
 ```sh
@@ -55,6 +52,7 @@ json
 GET /movies
 ```
 Descrição: Retorna a lista de filmes carregados do movies.csv.
+
 Resposta esperada (exemplo):
 ```sh
 [
@@ -73,6 +71,7 @@ Resposta esperada (exemplo):
 GET /producers/intervals
 ```
 Descrição: Retorna os produtores com o maior e o menor intervalo entre vitórias.
+
 Resposta esperada (exemplo):
 ```sh
 {
