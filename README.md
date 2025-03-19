@@ -1,19 +1,20 @@
-# 🎬 API Golden Raspberry Awards
+🎬 API Golden Raspberry Awards
+Esta API permite consultar os filmes vencedores do Framboesa de Ouro (Golden Raspberry Awards) e calcular os intervalos entre vitórias dos produtores.
 
-Esta API permite consultar os filmes vencedores do **Framboesa de Ouro** (Golden Raspberry Awards) e calcular os **intervalos entre vitórias dos produtores**.
+📂 Estrutura do Projeto
+/backend
+│── database.py → Configuração do banco de dados (SQLite)
+│── main.py → API desenvolvida com FastAPI
+│── movies.csv → Arquivo com os filmes vencedores
+│── test_main.py → Testes automatizados com pytest
+│── requirements.txt → Dependências do projeto
+│── README.md → Documentação do projeto
 
-## 📂 Estrutura do Projeto
-/backend │── database.py # Configuração do banco de dados (SQLite) │── main.py # API desenvolvida com FastAPI │── movies.csv # Arquivo com os filmes vencedores │── test_main.py # Testes automatizados com pytest │── requirements.txt # Dependências do projeto │── README.md # Documentação do projeto
-
-yaml
+🚀 Como Rodar o Projeto
+1️⃣ Clone o repositório
+sh
 Copiar
 Editar
-
----
-
-## 🚀 **Como Rodar o Projeto**
-### 1️⃣ **Clone o repositório**
-```sh
 git clone https://github.com/seu-usuario/golden-raspberry-api.git
 cd golden-raspberry-api
 2️⃣ Crie um ambiente virtual (opcional)
@@ -126,11 +127,3 @@ Após rodar a API, acesse o Swagger UI para testar os endpoints:
 Este projeto é de código aberto e pode ser utilizado conforme necessário.
 
 Se precisar de melhorias ou tiver dúvidas, contribua com o repositório! 🚀🎬
-
-yaml
-Copiar
-Editar
-
----
-
-Agora você pode **copiar e colar** diretamente no seu projeto. Se precisar de mais ajustes, só avisar! 🚀🔥
