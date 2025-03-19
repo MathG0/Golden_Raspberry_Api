@@ -12,15 +12,21 @@ Esta API permite consultar os filmes vencedores do **Framboesa de Ouro** (Golden
 
 ### 1️⃣ Clone o repositório
 ```sh
-git clone https://github.com/seu-usuario/golden-raspberry-api.git
-cd golden-raspberry-api
+git clone https://github.com/MathG0/Golden_Raspberry_Api.git
+cd Golde_Raspberry_Api
 ```
 
 ### 2️⃣ Crie um ambiente virtual (opcional)
 ```sh
 python -m venv venv
-source venv/bin/activate  # Para Linux/Mac
-venv\Scripts\activate     # Para Windows
+```
+No Linux/Mac
+```sh
+source venv/bin/activate
+```
+No Windows
+```sh
+venv\Scripts\activate
 ```
 3️⃣ Instale as dependências
 ```sh
@@ -51,9 +57,9 @@ json
 ```sh
 GET /movies
 ```
-Descrição: Retorna a lista de filmes carregados do movies.csv.
+Retorna a lista de filmes carregados do movies.csv.
 
-Resposta esperada (exemplo):
+Resposta esperada:
 ```sh
 [
   {
@@ -70,9 +76,9 @@ Resposta esperada (exemplo):
 ```sh
 GET /producers/intervals
 ```
-Descrição: Retorna os produtores com o maior e o menor intervalo entre vitórias.
+Retorna os produtores com o maior e o menor intervalo entre vitórias.
 
-Resposta esperada (exemplo):
+Resposta esperada:
 ```sh
 {
   "min": [
