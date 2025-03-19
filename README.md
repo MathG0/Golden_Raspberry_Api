@@ -29,8 +29,8 @@ pip install -r requirements.txt
 4️⃣ Execute a API
 ```sh
 uvicorn main:app --reload
-A API será iniciada em http://127.0.0.1:8000.
 ```
+A API será iniciada em http://127.0.0.1:8000.
 
 📌 Endpoints Disponíveis
 
