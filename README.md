@@ -8,15 +8,15 @@ Esta API permite consultar os filmes vencedores do **Framboesa de Ouro** (Golden
 
 ---
 
-## 🚀 Como Rodar o Projeto
+Como Rodar o Projeto
 
-### 1️⃣ Clone o repositório
+1 - Clone o repositório
 ```sh
 git clone https://github.com/MathG0/Golden_Raspberry_Api.git
 cd Golde_Raspberry_Api
 ```
 
-### 2️⃣ Crie um ambiente virtual (opcional)
+2 - Crie um ambiente virtual (opcional)
 ```sh
 python -m venv venv
 ```
@@ -28,23 +28,23 @@ No Windows
 ```sh
 venv\Scripts\activate
 ```
-3️⃣ Instale as dependências
+3 - Instale as dependências
 ```sh
 pip install -r requirements.txt
 ```
-4️⃣ Execute a API
+4 - Execute a API
 ```sh
 uvicorn main:app --reload
 ```
 A API será iniciada em http://127.0.0.1:8000.
 
-📌 Endpoints Disponíveis
+Endpoints Disponíveis
 
-🔹 1. Página Inicial
+1. Página Inicial
 ```sh
 GET /
 ```
-Descrição: Retorna uma mensagem indicando que a API está rodando.
+Retorna uma mensagem indicando que a API está rodando.
 
 Resposta esperada:
 json
@@ -53,7 +53,7 @@ json
   "message": "API funcionando! Vá para /docs para ver os endpoints."
 }
 ```
-🔹 2. Listar todos os filmes
+2. Listar todos os filmes
 ```sh
 GET /movies
 ```
@@ -72,7 +72,7 @@ Resposta esperada:
   ...
 ]
 ```
-🔹 3. Encontrar os produtores com maior/menor intervalo entre vitórias
+3. Encontrar os produtores com maior/menor intervalo entre vitórias
 ```sh
 GET /producers/intervals
 ```
@@ -99,14 +99,14 @@ Resposta esperada:
   ]
 }
 ```
-🗃️ Banco de Dados
+Banco de Dados
   A API usa SQLite (database.db) para armazenar os filmes.
   
   O banco de dados é criado automaticamente ao iniciar a aplicação.
   
-  Os dados são carregados do arquivo movies.csv no startup da API.
+  Os dados são carregados do arquivo movies.csv na função lifespan da API.
 
-🧪 Como Rodar os Testes
+Como Rodar os Testes
 Instale as dependências de testes:
 
 ```sh
@@ -120,15 +120,17 @@ Se todos os testes passarem, a saída será semelhante a:
 ```sh
 ========================== 2 passed in 0.72s ==========================
 ```
-🔗 Acesse a Documentação Interativa
+Acesse a Documentação Interativa
 
 Após rodar a API, acesse o Swagger UI para testar os endpoints:
 ```sh
-📌 http://127.0.0.1:8000/docs (Swagger UI)
-📌 http://127.0.0.1:8000/redoc (ReDoc)
-👨‍💻 Tecnologias Utilizadas
-✅ FastAPI - Framework para criação de APIs rápidas e eficientes
-✅ SQLAlchemy - ORM para interação com banco de dados SQLite
-✅ Pydantic - Validação de dados
-✅ pytest - Framework de testes
+http://127.0.0.1:8000/docs (Swagger UI)
+http://127.0.0.1:8000/redoc (ReDoc)
+``` 
+Principais Tecnologias Utilizadas
+
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- pytest
 ```
