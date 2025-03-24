@@ -125,7 +125,6 @@ Acesse a Documentação Interativa
 Após rodar a API, acesse o Swagger UI para testar os endpoints:
 ```sh
 http://127.0.0.1:8000/docs (Swagger UI)
-http://127.0.0.1:8000/redoc (ReDoc)
 ``` 
  --Principais Tecnologias Utilizadas--
 
