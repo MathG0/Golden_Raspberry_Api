@@ -13,7 +13,7 @@ Esta API permite consultar os filmes vencedores do **Framboesa de Ouro** (Golden
 1 - Clone o repositório
 ```sh
 git clone https://github.com/MathG0/Golden_Raspberry_Api.git
-cd Golde_Raspberry_Api
+cd Golden_Raspberry_Api
 ```
 
 2 - Crie um ambiente virtual (opcional)
